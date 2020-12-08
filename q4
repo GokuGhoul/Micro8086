@@ -1,0 +1,4 @@
+MOV AX, 09H
+MOV BX, 2
+DIV BX
+HLT ; halt!
