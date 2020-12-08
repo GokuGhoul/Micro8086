@@ -1,0 +1,4 @@
+MOV AX, 2025H
+MOV BX, 2002H
+SUB AX, BX
+HLT ; halt!
