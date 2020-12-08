@@ -1,0 +1,4 @@
+MOV AX, 2025H
+MOV BX, 2020H
+ADD AX, BX
+HLT ; halt!
