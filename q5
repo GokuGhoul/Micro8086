@@ -1,0 +1,45 @@
+#AAA
+MOV AH,0 ; Clear AH for most significant digit
+MOV AL,6 ; BCD 6 in AL
+ADD AL,6 ; Add BCD 5 to digit in AL
+AAA ; AH=1, AL=1 representing BCD 11.
+HLT
+
+#AAS
+SUB AH,AH
+MOV AL, '8'
+SUB AL, '2'
+AAS
+OR AL,20H
+HLT
+
+#AAM
+SUB AH,AH
+MOV AL, '8'
+MOV BL, '2'
+MUL BL
+AAM
+OR AL, 20H
+HLT
+
+#AAD
+SUB AH,AH
+MOV AL, '5'
+MOV BL, '3'
+DIV BL
+AAD
+OR AL,30H
+HLT
+
+#DAA
+MOV AL, 0Fh ; AL = 0Fh (15)
+DAA ; AL = 15h
+HLT
+
+#DAS
+MOV AL, 0050H
+MOV BL, 0070H
+ADD AL, BL
+DAS
+MOV [02500H], AL
+HLT
